@@ -24,5 +24,10 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      # 👇 НОВЫЙ ШАГ: Генерируем Gradle Wrapper
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 7.6
+
+      # 👇 ТЕПЕРЬ СБОРКА БУДЕТ РАБОТАТЬ
       - name: Build with Gradle
         run: ./gradlew build
