@@ -23,8 +23,11 @@ jobs:
         with:
           gradle-version: "4.10.3"
 
-      - name: Build
-        run: gradle --no-daemon --refresh-dependencies build
+      - name: Prepare Forge workspace
+        run: gradle --no-daemon --refresh-dependencies setupDecompWorkspace
+
+      - name: Build mod
+        run: gradle --no-daemon build
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
