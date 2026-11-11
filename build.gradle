@@ -24,6 +24,9 @@ targetCompatibility = 1.8
 minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "run"
+
+    // Канал и версия маппингов для ForgeGradle 2.1
+    mappings = "stable_12"
 }
 
 repositories {
