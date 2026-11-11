@@ -24,7 +24,7 @@ jobs:
           gradle-version: "4.10.3"
 
       - name: Build
-        run: gradle --no-daemon build
+        run: gradle --no-daemon --refresh-dependencies build
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
